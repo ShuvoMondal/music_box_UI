@@ -8,6 +8,7 @@ export async function middleware(req){
     console.log(pathname);
     if(pathname.includes("/api/auth") || token){
         return NextResponse.next();
+        
     }
 
     if(pathname.includes("/login")){
