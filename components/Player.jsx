@@ -4,18 +4,18 @@ import SpotifyPlayer from "react-spotify-web-playback"
 export default function Player({ accessToken, trackUri }) {
   const [play, setPlay] = useState(false)
 
-  useEffect(() => setPlay(true), [trackUri])
+  useEffect(() => setPlay(true), [trackUri]);
+
+  console.log(trackUri);
 
   if (!accessToken) return null
   return (
     <SpotifyPlayer
       token={accessToken}
       showSaveIcon
-      callback={state => {
-        if (!state.isPlaying) setPlay(false)
-      }}
       styles={{
-            bgColor: "rgb(19, 18, 18)",
+            bgColor: "rgb(0, 0, 0)",
+            width: 100,
             color: "#ffffff",
             sliderColor: "#1cb954",
             sliderHandleColor: "whitesmoke",

@@ -13,7 +13,7 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        Dashboard
+        <h1>Music Box</h1>
         <button onClick={() => signOut({ callbackUrl: "/login" })}>
           Logout
         </button>

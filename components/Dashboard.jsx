@@ -26,8 +26,8 @@ function Dashboard() {
   }, [payload]);
 
   return (
-    <div className="flex">
-      {notification ? <Player accessToken={session.user.accessToken} trackUri="spotify:user:3146kvhsohpyqituhw4cwxrtt4r4" /> : <div>no playlist</div>}
+    <div className="container-fuild max-w-screen">
+      {notification ? <Player accessToken={session.user.accessToken} trackUri={notification} /> : <div>no playlist</div>}
       {/* {console.log(session)} */}
       {/* <Player accessToken={session.user.accessToken} trackUri="https://open.spotify.com/track/3xMHXmedL5Rvfxmiar9Ryv" />  */}
     </div>
