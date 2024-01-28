@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import mqtt from "mqtt";
 
-const brokerUrl = "ws://wf28696e.emqx.cloud:8083/mqtt";
-const username = "shuvo";
-const password = "Shuvo@251";
+const brokerUrl = "wss://broker.hivemq.com:8884/mqtt";
+// const username = "";
+// const password = "";
 
 const setting = {
   url: brokerUrl,
-  config: {
-    username,
-    password,
-  },
+  // config: {
+  //   username,
+  //   password,
+  // },
 };
 
 export default function useMqtt() {
@@ -33,7 +33,7 @@ export default function useMqtt() {
       reconnectPeriod: 300000,
       connectTimeout: 30000,
       rejectUnauthorized: false,
-      ...setting.config,
+      // ...setting.config,
     };
     const clientMqtt = await mqtt.connect(url, options);
     setClient(clientMqtt);

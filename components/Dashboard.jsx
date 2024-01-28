@@ -4,6 +4,7 @@ import Player from "./Player";
 import { useSession } from "next-auth/react";
 
 const topic = "/esp32-sm007/nfcData";
+// console.log(topic, "topic");
 
 
 function Dashboard() {
