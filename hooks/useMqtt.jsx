@@ -2,15 +2,9 @@ import { useState, useEffect } from "react";
 import mqtt from "mqtt";
 
 const brokerUrl = "wss://broker.hivemq.com:8884/mqtt";
-// const username = "";
-// const password = "";
 
 const setting = {
-  url: brokerUrl,
-  // config: {
-  //   username,
-  //   password,
-  // },
+  url: brokerUrl
 };
 
 export default function useMqtt() {

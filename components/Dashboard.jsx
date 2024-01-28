@@ -3,15 +3,12 @@ import useMqtt from "@/hooks/useMqtt";
 import Player from "./Player";
 import { useSession } from "next-auth/react";
 
-const topic = "/esp32-sm007/nfcData";
-// console.log(topic, "topic");
-
-
-function Dashboard() {
+function Dashboard({mqttTopic}) {
   const { data: session, status } = useSession();
   const { mqttSubscribe, isConnected, payload } = useMqtt();
   const [notification, setNotification] = useState('');
-
+  const topic = "/esp32-sm007/nfcData";
+  
   useEffect(() => {
     if (isConnected) {
       mqttSubscribe(topic);
